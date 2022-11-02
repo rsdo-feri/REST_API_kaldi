@@ -1,6 +1,6 @@
 ## REST API KALDI
 
-First Build Docker image:
+First build Docker image:
 
 ``` docker build -t kaldi-asr .```
 
