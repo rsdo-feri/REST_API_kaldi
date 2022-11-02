@@ -1,7 +1,9 @@
-#first you need to build a Docker image
+## REST API KALDI
 
-docker build -t kaldi-asr .
+First Build Docker image:
 
-#now you can run Docker container
+``` docker build -t kaldi-asr .```
 
-docker run -d --name kaldi-asr -p 5000:5000 server_kaldi
+Run Docker container:
+
+``` docker run -d --name kaldi-asr -p 5000:5000 server_kaldi```
