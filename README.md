@@ -6,4 +6,4 @@ First build Docker image:
 
 Run Docker container:
 
-``` docker run -d --name kaldi-asr-server -p 5000:5000 kaldi-asr```
+``` docker run -d --name kaldi-asr-server -'your_path/asr:/asr -p 5000:5000 kaldi-asr ```
