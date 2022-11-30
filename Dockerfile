@@ -14,7 +14,7 @@ RUN pip install --upgrade pip \
         tqdm \
         flask
 
-COPY asr/ /asr
-RUN cd asr && mkdir temp
-CMD cd asr && python3.6 server.py >> output_server.txt
+#COPY asr/ /asr
+#RUN cd asr && mkdir temp
+CMD cd /asr && mkdir temp && python3.6 server.py >> output_server.txt
 
