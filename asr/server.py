@@ -21,15 +21,15 @@ def _declareRec():
         print("Napaka pri pripravi razpoznavalnika")
 
 @app.route('/')
-@app.route('/', methods=['GET'])
+@app.route('/api/healthCheck', methods=['GET'])
 def get_response():
     return json.dumps({'success':True}), 200, {'ContentType':'application/json'}
 
-@app.route('/', methods=['POST'])
+@app.route('/api/transcribe', methods=['POST'])
 def post_response():
     try:
         if request.method == 'POST':
-            wav_file=request.files['file']
+            wav_file=request.files['audio_file']
             filePath = "temp/"+wav_file.filename
             wav_file.save(filePath)
             asr_result=asr(filePath,rec)
