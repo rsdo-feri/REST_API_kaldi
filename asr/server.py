@@ -28,8 +28,8 @@ def get_response():
 
 @app.route('/api/transcribe', methods=['POST'])
 def post_response():
+    global next_post
     try:
-        global next_post
         if request.method == 'POST':
             while(next_post!=True):
                 time.sleep(1)
