@@ -40,12 +40,13 @@ def post_response():
             asr_result=asr(filePath,rec)
             os.remove(filePath)
             result='{"result":' + '"' + asr_result + '"}'
+            next_post=True
             return result
     except Exception as e:
         print(e)
 
 if __name__ == '__main__':
     rec=_declareRec()
-    global 
+    global next_post
     next_post=True
     app.run(host='0.0.0.0', port='5000')
